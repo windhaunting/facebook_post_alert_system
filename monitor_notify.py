@@ -277,7 +277,7 @@ def scrape_marketplace(page):
             if contains_keywords(title) or contains_keywords(content):
                 log_matched_post("Marketplace", f"Title: {title}\nContent: {content}\nURL: {post_url}")
                 save_seen_post(post_id)
-                show_notification("Matched Marketplace Post", f"{title[:100]}")
+                show_notification("Matched Marketplace Post", f"{title+content[:100]}")
 
     except Exception as e:
         print(f"Error while scraping marketplace: {e}")
