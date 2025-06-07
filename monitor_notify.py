@@ -30,7 +30,7 @@ RADIUS_MILES = float(os.getenv("MARKETPLACE_RADIUS", "20"))
 LATITUDE = float(os.getenv("MARKETPLACE_LATITUDE", "40.6912"))
 LONGITUDE = float(os.getenv("MARKETPLACE_LONGITUDE", "-75.2207"))
 GROUP_POST_LOOKBACK_HOURS = int(os.getenv("GROUP_POST_LOOKBACK_HOURS", "6"))
-DATA_RETENTION_DAYS = int(os.getenv("DATA_RETENTION_DAYS", "1"))
+#DATA_RETENTION_DAYS = int(os.getenv("DATA_RETENTION_DAYS", "1"))
 FETCH_SOURCES = os.getenv("FETCH_SOURCES", "both").lower()
 
 MATCHED_POSTS_FILE = "matched_posts.txt"
@@ -73,7 +73,7 @@ def log_matched_post(username, content, group_url=None, post_time=None, found_ti
     try:
         cleaned_content = content.strip()
         now = found_time or datetime.now()
-        cutoff = now - timedelta(days=DATA_RETENTION_DAYS)
+        #cutoff = now - timedelta(days=DATA_RETENTION_DAYS)
 
         # Format post time
         post_time_str = post_time.strftime('%Y-%m-%d %H:%M:%S') if post_time else "Unknown"
