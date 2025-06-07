@@ -56,9 +56,10 @@ playwright install
 # Make sure your .env file is configured
 # Then start the alert system
 python monitor_notify.py
-
+```
 
 ### 2. Set Up and Run the System  
+```
 # Create and activate a virtual environment
 conda create -n fb_notify python=3.10
 conda activate fb_notify
@@ -73,4 +74,4 @@ playwright install
 # Make sure your .env file is configured
 # Then start the alert system
 python monitor_notify.py
-
+```
